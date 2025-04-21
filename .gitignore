@@ -1,0 +1,16 @@
+# Bỏ qua các tệp cache của Python
+__pycache__/
+
+# Bỏ qua thư mục build và dist
+build/
+dist/
+
+# Bỏ qua các tệp đã biên dịch
+*.pyc
+
+# Bỏ qua tệp icon nếu không cần thiết
+#assets/icon.ico
+
+# Bỏ qua spec và setup file nếu không cần thiết
+main.spec
+#setup.iss
