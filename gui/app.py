@@ -5,6 +5,9 @@ from modules.image_to_word import convert_image_to_word
 from modules.pdf_to_word import convert_pdf_to_word
 from modules.word_to_pdf import convert_word_to_pdf
 
+import gui.image_to_text_gui.image_to_text_gui as imgToTextGui
+
+
 def run_app():
     def show_view(func_name):
         # Xóa vùng view hiện tại
@@ -21,8 +24,8 @@ def run_app():
             tk.Button(view_frame, text="Chọn ảnh và chuyển", command=convert_image_to_word).pack(pady=10)
 
         elif func_name == "Ảnh → Text":
-            tk.Label(view_frame, text="Chức năng: Ảnh → Text", font=("Arial", 12)).pack()
-            tk.Button(view_frame, text="Chọn ảnh và chuyển", command=convert_image_to_text).pack(pady=10)
+            imgToTextGui.convert_image_to_text_ui(view_frame)
+
 
         elif func_name == "PDF → Word":
             tk.Label(view_frame, text="Chức năng: PDF → Word", font=("Arial", 12)).pack()
@@ -63,3 +66,4 @@ def run_app():
     root.iconbitmap('D:\\Projects\\python\\tool_convert\\assets\\icon.ico')  # Đặt biểu tượng cho cửa sổ app
     # Bắt đầu giao diện
     root.mainloop()
+

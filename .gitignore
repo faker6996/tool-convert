@@ -14,3 +14,5 @@ dist/
 # Bỏ qua spec và setup file nếu không cần thiết
 main.spec
 #setup.iss
+
+*.exe
