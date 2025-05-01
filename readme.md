@@ -16,6 +16,7 @@
    git clone <repository-url>
    ```
 
+2. Install library
    ```bash
    pip install pillow pytesseract python-docx pdf2docx docx2pdf
    ```
