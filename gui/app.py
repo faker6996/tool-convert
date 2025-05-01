@@ -1,4 +1,6 @@
 import tkinter as tk
+import os
+import sys
 from modules.image_to_pdf import convert_image_to_pdf
 from modules.image_to_text import convert_image_to_text
 from modules.image_to_word import convert_image_to_word
@@ -108,6 +110,10 @@ def run_app():
         btn = tk.Button(option_frame, text=opt, width=20, command=lambda o=opt: show_view(o, canvas))
         btn.pack(pady=5)
 
-    root.iconbitmap('D:\\Projects\\python\\tool_convert\\assets\\icon.ico')  # Đặt biểu tượng cho cửa sổ app
-    # Bắt đầu giao diện
+    def resource_path(relative_path):
+        """Trả về đường dẫn thực đến resource (khi đóng gói hoặc chạy dev)"""
+        base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+        return os.path.join(base_path, relative_path)
+
+    icon_path = resource_path('assets/icon.ico')
     root.mainloop()
