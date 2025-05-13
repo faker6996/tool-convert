@@ -102,6 +102,7 @@ def run_app():
     # canvas.bind("<Button-4>", lambda event: canvas.yview_scroll(-1, "units"))
     # canvas.bind("<Button-5>", lambda event: canvas.yview_scroll(1, "units"))
     # canvas.bind("<Motion>", lambda event: print(f"Motion: x={event.x}, y={event.y}"))
+    # tesst
 
     options = [
         "Ảnh → PDF",
