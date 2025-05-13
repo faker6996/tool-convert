@@ -18,5 +18,5 @@
 
 2. Install library
    ```bash
-   pip install pillow pytesseract python-docx pdf2docx docx2pdf
+   pip install pillow pytesseract python-docx pdf2docx docx2pdf tesseract comtypes
    ```

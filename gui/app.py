@@ -37,13 +37,13 @@ def run_app():
             tk.Label(view_frame_inner, text="Chức năng: Word → PDF", font=("Arial", 12)).pack()
             tk.Button(view_frame_inner, text="Chọn file Word và chuyển", command=convert_word_to_pdf).pack(pady=10)
 
-        # Cập nhật kích thước scrollregion của canvas
-        view_frame_inner.update_idletasks()
-        canvas.config(scrollregion=canvas.bbox("all"))
-
         elif func_name == "PPTX → PDF":
             tk.Label(view_frame, text="Chức năng: PPTX → PDF", font=("Arial", 12)).pack()
             tk.Button(view_frame, text="Chọn file pptx và chuyển", command=convert_pptx_to_pdf).pack(pady=10)
+
+        # Cập nhật kích thước scrollregion của canvas
+        view_frame_inner.update_idletasks()
+        canvas.config(scrollregion=canvas.bbox("all"))
 
     root = tk.Tk()
     root.title("TOOL CHUYỂN ĐỔI FILE")
