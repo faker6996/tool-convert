@@ -4,3 +4,4 @@ python-docx
 pdf2docx
 docx2pdf
 tesseract
+comtypes

@@ -6,6 +6,7 @@ from modules.image_to_text import convert_image_to_text
 from modules.image_to_word import convert_image_to_word
 from modules.pdf_to_word import convert_pdf_to_word
 from modules.word_to_pdf import convert_word_to_pdf
+from modules.pptx_to_pdf import convert_pptx_to_pdf
 
 import gui.image_to_text_gui.image_to_text_gui as imgToTextGui
 
@@ -35,6 +36,10 @@ def run_app():
         elif func_name == "Word → PDF":
             tk.Label(view_frame_inner, text="Chức năng: Word → PDF", font=("Arial", 12)).pack()
             tk.Button(view_frame_inner, text="Chọn file Word và chuyển", command=convert_word_to_pdf).pack(pady=10)
+
+        elif func_name == "PPTX → PDF":
+            tk.Label(view_frame, text="Chức năng: PPTX → PDF", font=("Arial", 12)).pack()
+            tk.Button(view_frame, text="Chọn file pptx và chuyển", command=convert_pptx_to_pdf).pack(pady=10)
 
         # Cập nhật kích thước scrollregion của canvas
         view_frame_inner.update_idletasks()
@@ -97,6 +102,7 @@ def run_app():
     # canvas.bind("<Button-4>", lambda event: canvas.yview_scroll(-1, "units"))
     # canvas.bind("<Button-5>", lambda event: canvas.yview_scroll(1, "units"))
     # canvas.bind("<Motion>", lambda event: print(f"Motion: x={event.x}, y={event.y}"))
+    # tesst
 
     options = [
         "Ảnh → PDF",
@@ -104,6 +110,7 @@ def run_app():
         "Ảnh → Text",
         "PDF → Word",
         "Word → PDF",
+        "PPTX → PDF",
     ]
 
     for opt in options:
